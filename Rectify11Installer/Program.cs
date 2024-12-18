@@ -49,7 +49,7 @@ namespace Rectify11Installer
             if (!skipVersionCheck)
             {
                 // Check if OS is older than 1903
-                if (Environment.OSVersion.Version.Build <= 18362)
+                if (Environment.OSVersion.Version.Build <= 1000)
                 {
                     ShowCompatibilityMessage(false, Strings.Rectify11.compatErrorInstruc, Strings.Rectify11.compatErrorText);
                     return;
@@ -58,7 +58,7 @@ namespace Rectify11Installer
                 // Check if OS is Windows 1903 - Windows 11 build 21343
                 // 21343 is the first known build of Windows 11
 
-                if ((Environment.OSVersion.Version.Build >= 18362) && (Environment.OSVersion.Version.Build < 21343))
+                if ((Environment.OSVersion.Version.Build >= 1000) && (Environment.OSVersion.Version.Build < 21343))
                 {
                     if (!ShowCompatibilityMessage(true, Strings.Rectify11.compatWarnText, Strings.Rectify11.compatWarnInstruc))
                         return;
